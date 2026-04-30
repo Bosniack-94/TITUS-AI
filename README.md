@@ -49,6 +49,10 @@ The `TITUSOrchestrator` manages a fleet of specialized agents (Scanner, Voice, R
 6. **ARCHIVE**: Synthesize and store results in long-term memory.
 
 ---
+## 👥 Core Contributors & Credits
+- **Bosniack-94**: System Integration, Orchestration & UI/UX.
+- **SIXxMENDER**: Lead Architect of **Psiquis-X** (The foundational cognitive core of TITUS).
+
 ## 📊 Business & Performance Impact
 - **Decision Latency**: < 1.5s for complex goal decomposition.
 - **Contextual Recall**: 98% accuracy in mission retrieval using Vector Embeddings.
