@@ -1,0 +1,175 @@
+:root {
+  --bg: #010409;
+  --sidebar: #0d1117;
+  --accent: #00f2ff;
+  --accent-dim: rgba(0, 242, 255, 0.1);
+  --text: #e6edf3;
+  --text-dim: #8b949e;
+  --border: rgba(0, 242, 255, 0.15);
+  --card: #161b22;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* TITUS Dashboard Layout */
+.titus-container {
+  display: flex;
+  height: 100vh;
+}
+
+.titus-sidebar {
+  width: 300px;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.titus-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at center, #0d1117 0%, #010409 100%);
+}
+
+.titus-header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.titus-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--accent);
+}
+
+.titus-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Agents Cards */
+.agent-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.agent-name { color: var(--accent); font-weight: bold; display: block; margin-bottom: 5px; }
+
+/* Thinking Chain */
+.thought-chain {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.thought-step {
+  display: flex;
+  gap: 20px;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron';
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+}
+
+.step-label { font-size: 0.7rem; color: var(--accent); font-family: 'Orbitron'; margin-bottom: 8px; }
+.step-text { font-size: 0.9rem; line-height: 1.6; }
+
+/* Terminal Input */
+.titus-input-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+}
+
+.input-wrapper {
+  width: 100%;
+  max-width: 850px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 20px 30px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus { border-color: var(--accent); background: rgba(255, 255, 255, 0.06); }
+
+.btn-execute {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-family: 'Orbitron';
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-execute:hover { box-shadow: 0 0 20px var(--accent-dim); transform: translateY(-50%) scale(1.05); }

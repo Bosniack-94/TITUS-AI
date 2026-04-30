@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & Secrets
+.env
+.venv
+env/
+venv/
+ENV/
+*.env
+
+# Generated Reports (Personal/Internal)
+*.doc
+*.txt
+DIAMOND_REPORT_LOG.md
+STARK_LOG_FINAL.md
+
+# Database
+*.db
+
+# OS
+.DS_Store
+Thumbs.db

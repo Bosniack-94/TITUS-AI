@@ -1,0 +1,58 @@
+{
+  "owner": "Yayo",
+  "timezone": "America/Mexico_City",
+
+  "work_days": [0, 1, 2, 3, 4],
+  "rest_days":  [5, 6],
+
+  "special_rest_days": [
+    "2025-01-01",
+    "2025-12-25",
+    "2025-09-15",
+    "2025-05-01"
+  ],
+
+  "active_projects": [
+    {
+      "id": "petit_roq",
+      "name": "Petit Roq",
+      "description": "Sistema ERP para restaurante Petit Roq",
+      "current_milestone": 7,
+      "total_milestones": 12,
+      "last_worked": "2026-04-07",
+      "priority": "HIGH",
+      "notes": "Escaneo de recibos y auditoría financiera"
+    },
+    {
+      "id": "titus_core",
+      "name": "TITUS Core",
+      "description": "Arquitectura hexagonal del agente autónomo",
+      "current_milestone": 7,
+      "total_milestones": 10,
+      "last_worked": "2026-04-07",
+      "priority": "HIGH",
+      "notes": "Memoria triple capa y Agente Bibliotecario completados"
+    }
+  ],
+
+  "pending_tasks": [
+    {
+      "id": "task_001",
+      "title": "Resolver driver PyAudio para micrófono",
+      "project": "titus_core",
+      "priority": "MEDIUM",
+      "type": "technical"
+    }
+  ],
+
+  "personal_reminders": [
+    {
+      "day_of_week": "monday",
+      "message": "Inicio de semana. Revisa los objetivos de la semana."
+    },
+    {
+      "day_of_week": "friday",
+      "message": "Fin de semana. Considera hacer un resumen de avances."
+    }
+  ]
+}
